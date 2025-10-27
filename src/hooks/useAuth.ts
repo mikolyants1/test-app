@@ -27,6 +27,7 @@ export const useAuth = () => {
   useEffect(() => {
     const authtorize = async () => {
       try {
+        await AuthApi.test();
         if (access.value) return setIsAuth(true);
         if (!initData) return;
         await AuthApi.validateHash({ initDataRaw: initData, ip: '' }).then(data => {

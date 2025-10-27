@@ -21,6 +21,9 @@ export class AuthApi extends HttpClient {
     static async validateHash(args: IValidateHashArgs) {
         return this.http.post<IValidateHashResponse>('token/create', args).then(({ data }) => data);
     }
+    static async test() {
+        return this.http.get('test/test').then(({ data }) => alert(data));
+    }
     static async logout(): Promise<void> {
         await this.http.post("/auth/logout");
     }
