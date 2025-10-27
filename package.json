@@ -8,6 +8,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "install": "npm i --legacy-peer-deps",
+    "tested":"tes", 
     "lint": "eslint"
   },
   "dependencies": {
