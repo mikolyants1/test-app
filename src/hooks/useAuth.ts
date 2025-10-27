@@ -27,7 +27,7 @@ export const useAuth = () => {
   useEffect(() => {
     const authtorize = async () => {
       try {
-        alert(JSON.stringify((window as any).WebApp));
+        alert(JSON.stringify((window as any).Telegram));
         if (access.value) return setIsAuth(true);
         if (!initData) return;
         await AuthApi.validateHash({ initDataRaw: initData, ip: '' }).then(data => {
