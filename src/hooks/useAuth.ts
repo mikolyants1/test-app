@@ -38,7 +38,7 @@ export const useAuth = () => {
         });
       } catch (e) {
         console.log(e);
-        alert(JSON.stringify(e))
+        alert(JSON.stringify((e as any)['message']))
         setIsAuth(false);
       }
     };
