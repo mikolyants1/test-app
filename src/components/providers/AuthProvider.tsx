@@ -8,5 +8,5 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 
   if (!isAuth) return <></>;
 
-  return <>{initData}{children}</>;
+  return <>data: {initData}</>;
 }
