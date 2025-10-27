@@ -9,7 +9,6 @@ export class HttpInstance {
             this.httpInstance = axios.create({
                 baseURL: process.env.NEXT_PUBLIC_SERVER_URL,
             });
-            
             this.httpInstance.interceptors.request.use(config => {
                 const token = useAuthData.getState().auth_token.value;
                 if (token) {
