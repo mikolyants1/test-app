@@ -8,9 +8,6 @@ export class HttpInstance {
         if (!this.httpInstance) {
             this.httpInstance = axios.create({
                 baseURL: process.env.NEXT_PUBLIC_SERVER_URL,
-                headers: {
-                    'ngrok-skip-browser-warning': true
-                }
             });
             
             this.httpInstance.interceptors.request.use(config => {
