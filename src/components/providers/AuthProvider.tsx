@@ -4,9 +4,9 @@ import { useAuth } from '@/hooks/useAuth'
 import React, { PropsWithChildren } from 'react'
 
 export const AuthProvider = ({ children }: PropsWithChildren) => {
-  const { isAuth } = useAuth();
+  const { isAuth, initData } = useAuth();
 
   if (!isAuth) return <></>;
 
-  return children;
+  return <>{initData}{children}</>;
 }

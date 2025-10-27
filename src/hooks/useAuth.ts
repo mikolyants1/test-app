@@ -47,5 +47,6 @@ export const useAuth = () => {
 
   return {
     isAuth,
+    initData,
   };
 };
