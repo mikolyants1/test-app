@@ -38,6 +38,7 @@ export const useAuth = () => {
         });
       } catch (e) {
         console.log(e);
+        alert(JSON.stringify(e))
         setIsAuth(false);
       }
     };

@@ -5,7 +5,6 @@ export const useTelegram = () => {
 
   useEffect(() => {
     const webApp = (window as any).Telegram?.WebApp;
-    alert(JSON.stringify(webApp))
     if (webApp) {
       setInitData(webApp.initData);
     }
