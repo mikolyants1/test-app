@@ -39,7 +39,7 @@ export const useAuth = () => {
         });
       } catch (e) {
         console.log(e);
-        prompt('t', JSON.stringify((e as any)['message']))
+        prompt('t', JSON.stringify(e))
         setIsAuth(false);
       }
     };
