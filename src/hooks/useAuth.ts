@@ -30,7 +30,7 @@ export const useAuth = () => {
         await AuthApi.test();
         if (access.value) return setIsAuth(true);
         if (!initData) return;
-        await AuthApi.validateHash({ initDataRaw: initData, ip: '' }).then(data => {
+        await AuthApi.validateHash({ initDataRaw: initData, ip: 'test-app-taupe-theta.vercel.app' }).then(data => {
           if (data.accessToken) {
             setToken({ value: data.accessToken, timestamp: Date.now(), expire: DAY_IN_MS });
             setAccess({ value: true, timestamp: Date.now(), expire: DAY_IN_MS });
