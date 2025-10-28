@@ -19,10 +19,10 @@ export class AuthApi extends HttpClient {
     }
 
     static async validateHash(args: IValidateHashArgs) {
-        return this.http.post<IValidateHashResponse>('token/create', args).then(({ data }) => data);
+        return this.http.post<IValidateHashResponse>('auth/token/create', args).then(({ data }) => data);
     }
     static async test() {
-        return this.http.get('test/test').then(({ data }) => prompt('d', JSON.stringify(data)));
+        return this.http.get('auth/test/test').then(({ data }) => prompt('d', JSON.stringify(data)));
     }
     static async logout(): Promise<void> {
         await this.http.post("/auth/logout");
