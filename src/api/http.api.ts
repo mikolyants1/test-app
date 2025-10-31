@@ -1,6 +1,8 @@
-import axios, { AxiosInstance } from "axios";
+import { AxiosInstance } from "axios";
 import { HttpInstance } from "@/utils/instance.utils";
 
 export abstract class HttpClient {
-    protected static readonly http: AxiosInstance = HttpInstance.getInstance();
+    protected static get http(): AxiosInstance {
+        return HttpInstance.getInstance();
+    }
 }

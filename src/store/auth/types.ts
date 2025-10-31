@@ -5,8 +5,6 @@ export interface IAuthData<T> {
 }
 
 export interface IAuthDataStore {
-  auth_token: IAuthData<string>;
   access: IAuthData<boolean>;
   setAccess: (args: IAuthData<boolean>) => void;
-  setToken: (args: IAuthData<string>) => void;
 }

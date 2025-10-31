@@ -7,13 +7,13 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   fullWidth?: boolean;
 }
 
-export const Input: React.FC<InputProps> = ({
+export const Input = ({
   label,
   error,
   fullWidth = false,
   className = '',
   ...props
-}) => {
+}: InputProps) => {
   return (
     <div className={`${styles.wrapper} ${fullWidth ? styles.fullWidth : ''}`}>
       {label && <label className={styles.label}>{label}</label>}

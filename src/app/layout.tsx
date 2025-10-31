@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/components/providers/AuthProvider";
+import { init } from '@telegram-apps/sdk-react';
 import Script from "next/script";
+import { test1 } from "@/utils/index";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +26,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  test1();
   return (
     <html lang="en">
       <head>
